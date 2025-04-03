@@ -1,0 +1,24 @@
+# 核心依赖
+langchain
+langchain-core
+langchain-openai
+langgraph
+openai
+pydantic
+fastapi
+h11
+uvicorn
+click
+
+sqlalchemy
+
+# 工具和辅助库
+python-dotenv
+loguru
+pandas
+numpy
+
+# 文本处理
+beautifulsoup4
+pytz
+yfinance

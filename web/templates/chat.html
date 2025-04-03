@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企业对话机器人</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>企业需求分析助手</h1>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="system-message">
+                <div class="message-content">您好，我是企业需求分析助手，有什么可以帮您？</div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <textarea id="user-input" placeholder="请输入您的问题..." rows="3"></textarea>
+            <button id="send-button">发送</button>
+        </div>
+        <div class="chat-status" id="chat-status"></div>
+    </div>
+    <script src="../static/js/chat.js"></script>
+</body>
+</html>
