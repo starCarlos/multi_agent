@@ -9,7 +9,7 @@
    - SQLite关系型存储：用户交互记录/报价历史/项目跟踪
 
 2. **五维Agent协同网络**
-   - 分类Agent：实时对话意图识别
+   - 入口Agent：推理问题解决步骤，调用不同agent，也算意图识别分类
    - 需求分析师Agent：文档解析与需求拆解
    - 成本测算Agent：工时模型+报价矩阵
    - 企业智库Agent：公司知识图谱查询
@@ -22,7 +22,7 @@
 
 ```
 graph TD
-    A[用户输入] --> B{意图分类器}
+    A[用户输入] --> B{入口意图分类器}
     B -->|需求相关| C[ChromaDB语义检索]
     B -->|报价测算| D[历史项目数据库]
     B -->|公司咨询| E[企业知识库]
@@ -39,7 +39,7 @@ graph TD
 
 ```bash
 git clone <repository-url>
-cd enterprise-bot
+cd multi_agent
 ```
 
 2. 安装依赖
@@ -86,6 +86,7 @@ python main.py
 ├── utils/             # 工具函数
 │   ├── logger.py      # 日志工具
 │   └── helpers.py     # 辅助函数
+|── docs/              # 知识库文档存放目录
 ├── config.py          # 配置文件
 ├── main.py            # 主程序入口
 ├── .env.example       # 环境变量示例
